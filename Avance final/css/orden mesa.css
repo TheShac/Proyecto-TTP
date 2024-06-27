@@ -1,0 +1,120 @@
+/* Estilos generales */
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(#30142b, #a12727);
+}
+
+/* Estilos para el contenedor principal */
+.orden-mesa {
+    max-width: 60%; /* Reducir el ancho */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-bottom: 40px; /* Aumentar el margen inferior para hacerlo más largo */
+}
+
+/* Estilos para el título */
+.titulo {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la información de la mesa */
+.mesa-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.numero-mesa {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nombre-cliente {
+    font-size: 16px;
+}
+
+/* Estilos para el detalle del pedido */
+.detalle {
+    margin-bottom: 40px; /* Aumentado el margen inferior */
+}
+
+.detalle h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Estilos para los productos */
+.productos {
+    margin-bottom: 20px;
+}
+
+.producto {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.producto .nombre {
+    font-size: 16px;
+}
+
+.producto .precio {
+    font-size: 16px;
+}
+
+/* Estilos para la propina */
+.propina {
+    display: flex;
+    justify-content: space-between;
+}
+
+.subtitulo {
+    font-weight: bold;
+}
+
+/* Estilos para el botón "Listo" */
+.listo-button {
+    display: block;
+    width: auto; /* Cambiar el ancho a automático */
+    padding: 10px 20px; /* Ajustar el relleno */
+    background-color: #b79726;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin-top: 400px; /* Agregar un margen superior */
+}
+
+.listo-button:hover {
+    background-color: #f49803;
+}
+
+/* Estilos para el precio total */
+.total {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    margin-top: 400px; /* Agregar un margen superior */
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pantalla de Mesas</title>
+  <link rel="stylesheet" href="css/mesas.css">
+</head>
+<body>
+  <div class="pantalla-mesas-container">
+    <div class="header">
+      <h1>Mesas</h1>
+    </div>
+    <div class="mesa">
+      <div class="info">
+        <div class="numero-mesa">Mesa 1</div>
+        <div class="cliente">Cliente</div>
+      </div>
+      <div class="detalle">
+        <div class="precio">$10.000</div>
+        <button class="ver-orden">Ver Orden</button>
+      </div>
+    </div>
+    <!-- Repite estas secciones para cada mesa -->
+    <div class="mesa">
+      <div class="info">
+        <div class="numero-mesa">Mesa 2</div>
+        <div class="cliente">Cliente</div>
+      </div>
+      <div class="detalle">
+        <div class="precio">$10.000</div>
+        <button class="ver-orden">Ver Orden</button>
+      </div>
+    </div>
+    <!-- Repite estas secciones para cada mesa -->
+    <div class="mesa">
+      <div class="info">
+        <div class="numero-mesa">Mesa 3</div>
+        <div class="cliente">Cliente</div>
+      </div>
+      <div class="detalle">
+        <div class="precio">$10.000</div>
+        <button class="ver-orden">Ver Orden</button>
+      </div>
+    </div>
+    <!-- Repite estas secciones para cada mesa -->
+    <div class="mesa">
+      <div class="info">
+        <div class="numero-mesa">Mesa 4</div>
+        <div class="cliente">Cliente</div>
+      </div>
+      <div class="detalle">
+        <div class="precio">$10.000</div>
+        <button id="ver-orden-4" class="ver-orden">Ver Orden</button>
+      </div>
+    </div>
+    <!-- Repite estas secciones para cada mesa -->
+  </div>
+
+  <script>
+    // Agregar un evento de clic al botón de ver orden de la mesa 4
+    document.getElementById('ver-orden-4').addEventListener('click', function() {
+      // Redirigir a la página de orden de mesa N4
+      window.location.href = 'pantalla de orden.html';
+    });
+  </script>
+</body>
+</html>

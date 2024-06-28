@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú del Restaurante</title>
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+    <div class="menu-container">
+        <h1>Menú</h1>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="imagenes/completo.jpg" alt="Completo">
+                <h3>Completo</h3>
+                <p>$1.500 CLP</p>
+                <div class="quantity-controls">
+                    <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="imagenes/chacarero.jpg" alt="Chacarero">
+                <h3>Chacarero</h3>
+                <p>$5.500 CLP</p>
+                <div class="quantity-controls">
+                    <button class="quantity-btn" onclick="changeQuantity(this, -1)">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+            </div>
+            <!-- Agrega más items aquí -->
+        </div>
+        <button onclick="verCarrito()">Ver carrito</button>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

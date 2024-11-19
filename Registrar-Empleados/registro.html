@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar Trabajador</title>
+  <link rel="stylesheet" href="css/registro.css">
+</head>
+<body>
+  <div class="registro-container">
+    <img src="imagenes/Logo.png" alt="Logo" class="logo">
+    <div class="registro-box">
+      <h2>Registrar Trabajador</h2>
+      <form id="register-form">
+        <div class="user-box">
+          <input type="text" id="nombre" name="nombre" required>
+          <label for="nombre">Nombre</label>
+        </div>
+
+        <div class="user-box">
+          <input type="text" id="usuario" name="usuario" required>
+          <label for="usuario">Usuario</label>
+        </div>
+        
+        <div class="user-box">
+          <input type="email" id="correo" name="correo" required>
+          <label for="correo">Correo Electrónico</label>
+        </div>
+        
+        <div class="user-box">
+          <input type="password" id="contrasena" name="contrasena" required>
+          <label for="contrasena">Contraseña</label>
+        </div>
+        
+        <div class="user-box">
+          <select id="rol" name="rol" required>
+            <option value="mesero">Mesero</option>
+            <option value="cocinero">Cocinero</option>
+            <option value="admin">Administrador</option>
+          </select>
+          <label for="rol">Rol</label>
+        </div>
+        
+        <button type="submit">Registrar</button>
+      </form>
+    </div>
+  </div>
+  <script>
+    document.getElementById('register-form').addEventListener('submit', async function(event) {
+      event.preventDefault();
+      const nombre = document.getElementById('nombre').value;
+      const usuario = document.getElementById('usuario').value;
+      const correo = document.getElementById('correo').value;
+      const contrasena = document.getElementById('contrasena').value;
+      const rol = document.getElementById('rol').value;
+
+      const response = await fetch('/api/auth/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nombre, usuario, correo, contrasena, rol })
+      });
+
+      if (response.ok) {
+        alert('Usuario registrado exitosamente');
+      } 
+      else {
+        alert('Error al registrar el usuario');
+      }
+    });
+  </script>
+</body>
+</html>
